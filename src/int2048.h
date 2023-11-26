@@ -19,13 +19,6 @@
 #include <cmath>  //have consulted TA before I use it!
 // 请不要使用 using namespace std;
 namespace sjtu {
-    //for FFT
-    static const int MAXFFT = 5000010;
-    const long double PI = acos( - 1.0);
-    struct complex{
-        long double x, y;
-    }a[MAXFFT], b[MAXFFT];
-    int limit, exponent, r[MAXFFT];
 
     class int2048 {
 
@@ -82,12 +75,8 @@ namespace sjtu {
         int2048 &operator-=(const int2048 &other);
         friend int2048 operator-(int2048 n1, const int2048 &n2);
 
-        complex complex_add(complex a, complex b);
-        complex complex_minus(complex a, complex b);
-        complex complex_mul(complex a, complex b);
 
 
-        void FFT(complex *arr, int I);
         int2048 &operator*=(const int2048 &other);
         friend int2048 operator*(int2048 n1, const int2048 &n2);
 

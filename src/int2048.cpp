@@ -4,7 +4,13 @@
 #include <cstring>
 
 namespace sjtu {
-
+    //for FFT
+    static const int MAXFFT = 5000010;
+    const long double PI = acos( - 1.0);
+    struct complex{
+        long double x, y;
+    }a[MAXFFT], b[MAXFFT];
+    int limit, exponent, r[MAXFFT];
 //int2048::int2048() {
 
         int2048::int2048(){
